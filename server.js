@@ -24,3 +24,6 @@ app.use(require("./routes/htmlRoutes.js"));
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
+
+var MONGODB_URI = process.env.MONGODC_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.connect(MONGODB_URI);
